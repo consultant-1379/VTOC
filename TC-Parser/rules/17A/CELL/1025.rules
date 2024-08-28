@@ -1,0 +1,1 @@
+sum(in.pmS1DlNasTransportRcvd) <=> sum(out.pmS1DlNasTransportRcvd)when(in.MOID = out.MOID, in.pmS1DlNasTransportRcvd!=null, in.pmS1DlNasTransportRcvd!=0, out.pmS1DlNasTransportRcvd!=null, out.pmS1DlNasTransportRcvd!=0)

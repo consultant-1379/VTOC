@@ -1,0 +1,1 @@
+Update EVENT_5223 set pmNoOfCmasReq =1 from EVENT_5223 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID;

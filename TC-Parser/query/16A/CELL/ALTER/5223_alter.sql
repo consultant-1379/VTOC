@@ -1,0 +1,1 @@
+Alter Table EVENT3_5223 add pmNoOfCmasReq as int null  ;

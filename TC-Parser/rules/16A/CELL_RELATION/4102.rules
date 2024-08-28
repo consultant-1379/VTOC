@@ -1,0 +1,5 @@
+alias.MOIDCondition <-  in.CELLRELATIONMOID = out.MOID
+sum(in.pmHoPrepSuccAto) <=>	sum(out.pmHoPrepSuccAto)when(alias.MOIDCondition, in.pmHoPrepSuccAto !=null, out.pmHoPrepSuccAto != null, out.pmHoPrepSuccAto != 0 )
+sum(in.pmHoPrepAttSrvccAto) <=>	 sum(out.pmHoPrepAttSrvccAto)when(alias.MOIDCondition, in.pmHoPrepAttSrvccAto !=null, out.pmHoPrepAttSrvccAto != null, out.pmHoPrepAttSrvccAto != 0 )
+sum(in.pmHoPrepSuccSrvccAto) <=> sum(out.pmHoPrepSuccSrvccAto)when(alias.MOIDCondition, in.pmHoPrepSuccSrvccAto !=null, out.pmHoPrepSuccSrvccAto != null, out.pmHoPrepSuccSrvccAto != 0 )
+sum(in.pmHoPrepAttAto) <=> sum(out.pmHoPrepAttAto)when(alias.MOIDCondition, in.pmHoPrepAttAto !=null, out.pmHoPrepAttAto != null, out.pmHoPrepAttAto != 0 )

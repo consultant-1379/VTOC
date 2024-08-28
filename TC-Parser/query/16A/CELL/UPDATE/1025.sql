@@ -1,0 +1,1 @@
+Update EVENT_1025 set pmS1DlNasTransportRcvd =1 from EVENT_1025 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID;

@@ -1,0 +1,1 @@
+ALTER TABLE EVENT3_1067 ADD pmS1UlNasTransportSent as int null;

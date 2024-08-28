@@ -1,0 +1,10 @@
+alias.MOIDCondition <- in.CELLRELATIONMOID = out.MOID
+sum(in.pmCaDeconfigured) <=> sum(out.pmCaDeconfigured)when(alias.MOIDCondition, in.pmCaDeconfigured!=null, out.pmCaDeconfigured!=null, out.pmCaDeconfigured!=0, in.pmCaDeconfigured!=0)
+sum(in.pmCaDeconfiguredAddUl) <=> sum(out.pmCaDeconfiguredAddUl)when(alias.MOIDCondition, in.pmCaDeconfiguredAddUl!=null, out.pmCaDeconfiguredAddUl!=null, out.pmCaDeconfiguredAddUl!=0, in.pmCaDeconfiguredAddUl!=0)
+sum(in.pmCaDeconfiguredRemoveUl) <=> sum(out.pmCaDeconfiguredRemoveUl)when(alias.MOIDCondition, in.pmCaDeconfiguredRemoveUl!=null, out.pmCaDeconfiguredRemoveUl!=null, out.pmCaDeconfiguredRemoveUl!=0, in.pmCaDeconfiguredRemoveUl!=0)
+sum(in.pmCaDeconfiguredComboInvalid) <=> sum(out.pmCaDeconfiguredComboInvalid)when(alias.MOIDCondition, in.pmCaDeconfiguredComboInvalid!=null, out.pmCaDeconfiguredComboInvalid!=null, out.pmCaDeconfiguredComboInvalid!=0, in.pmCaDeconfiguredComboInvalid!=0)
+sum(in.pmCaDeconfiguredHo) <=> sum(out.pmCaDeconfiguredHo)when(alias.MOIDCondition, in.pmCaDeconfiguredHo!=null, out.pmCaDeconfiguredHo!=null, out.pmCaDeconfiguredHo!=0, in.pmCaDeconfiguredHo!=0)
+sum(in.pmCaDeconfiguredConnReest) <=> sum(out.pmCaDeconfiguredConnReest)when(alias.MOIDCondition, in.pmCaDeconfiguredConnReest!=null, out.pmCaDeconfiguredConnReest!=null, out.pmCaDeconfiguredConnReest!=0, in.pmCaDeconfiguredConnReest!=0)
+sum(in.pmCaDeconfiguredOoc) <=> sum(out.pmCaDeconfiguredOoc)when(alias.MOIDCondition, in.pmCaDeconfiguredOoc!=null, out.pmCaDeconfiguredOoc!=null, out.pmCaDeconfiguredOoc!=0, in.pmCaDeconfiguredOoc!=0)
+sum(in.pmCaDeconfiguredSCellChange) <=> sum(out.pmCaDeconfiguredSCellChange)when(alias.MOIDCondition, in.pmCaDeconfiguredSCellChange!=null, out.pmCaDeconfiguredSCellChange!=null, out.pmCaDeconfiguredSCellChange!=0, in.pmCaDeconfiguredSCellChange!=0)
+sum(in.pmCaConfigDuration) <=> sum(out.pmCaConfigDuration)when(alias.MOIDCondition, in.pmCaConfigDuration!=null, out.pmCaConfigDuration!=null, out.pmCaConfigDuration!=0, in.pmCaConfigDuration!=0)

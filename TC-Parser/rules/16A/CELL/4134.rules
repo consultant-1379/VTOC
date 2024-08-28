@@ -1,0 +1,7 @@
+alias.MOIDCondition <-  in.MOID = out.MOID
+sum(in.pmNonPlannedPciMeasFailEutranCgi)<=>sum(out.pmNonPlannedPciMeasFailEutranCgi)when(alias.MOIDCondition,in.pmNonPlannedPciMeasFailEutranCgi!=null,out.pmNonPlannedPciMeasFailEutranCgi!=null,out.pmNonPlannedPciMeasFailEutranCgi!=0  )
+sum(in.pmNonPlannedPciMeasSuccEutranCgi)<=>sum(out.pmNonPlannedPciMeasSuccEutranCgi)when(alias.MOIDCondition,in.pmNonPlannedPciMeasSuccEutranCgi!=null,out.pmNonPlannedPciMeasSuccEutranCgi!=null,out.pmNonPlannedPciMeasSuccEutranCgi!=0 )
+sum(in.pmDrxMeasSuccCgi)<=>sum(out.pmDrxMeasSuccCgi)when(alias.MOIDCondition,in.pmDrxMeasSuccCgi!=null,out.pmDrxMeasSuccCgi!=null,out.pmDrxMeasSuccCgi!=0 )
+sum(in.pmAgMeasSuccCgi)<=>sum(out.pmAgMeasSuccCgi)when(alias.MOIDCondition,in.pmAgMeasSuccCgi!=null,out.pmAgMeasSuccCgi!=null,out.pmAgMeasSuccCgi!=0 )
+sum(in.pmDrxMeasSuccCgiQci1)<=>sum(out.pmDrxMeasSuccCgiQci1)when(alias.MOIDCondition,in.pmDrxMeasSuccCgiQci1!=null,out.pmDrxMeasSuccCgiQci1!=null ,out.pmDrxMeasSuccCgiQci1!=0)
+sum(in.pmAgMeasSuccCgiQci1)<=>sum(out.pmAgMeasSuccCgiQci1)when(alias.MOIDCondition,in.pmAgMeasSuccCgiQci1!=null,out.pmAgMeasSuccCgiQci1!=null,out.pmAgMeasSuccCgiQci1!=0 )

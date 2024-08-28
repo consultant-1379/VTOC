@@ -1,0 +1,6 @@
+alias.MOIDCondition <- in.CELLRELATIONMOID = out.MOID
+#sum(in.pmHoPrepAttLteInterFAto) <=> sum(out.pmHoPrepAttLteInterFAto )when(alias.MOIDCondition, in.pmHoPrepAttLteInterFAto!=null, in.pmHoPrepAttLteInterFAto!=0, out.pmHoPrepAttLteInterFAto!=null, out.pmHoPrepAttLteInterFAto!=0)
+#sum(in.pmHoPrepSuccLteInterFAto) <=> sum(out.pmHoPrepSuccLteInterFAto )when(alias.MOIDCondition, in.pmHoPrepSuccLteInterFAto!=null, out.pmHoPrepSuccLteInterFAto!=null, in.pmHoPrepSuccLteInterFAto!=0, out.pmHoPrepSuccLteInterFAto!=0)
+#counter based on 4102 and 4110
+#unique(in.apmHoPrepAttLteInterFAtoM) <=> sum(out.pmHoPrepAttLteInterFAto)when(alias.MOIDCondition, in.apmHoPrepAttLteInterFAtoM !=null, out.pmHoPrepAttLteInterFAto != null, in.pmHoPrepAttLteInterFAto != 0, out.pmHoPrepAttLteInterFAto != 0 )
+#unique(in.apmHoPrepSuccLteInterFAtoM) <=> sum(out.pmHoPrepSuccLteInterFAto)when(alias.MOIDCondition, in.apmHoPrepSuccLteInterFAtoM !=null,in.apmHoPrepSuccLteInterFAtoM !=0, out.pmHoPrepSuccLteInterFAto != null, out.pmHoPrepSuccLteInterFAto != 0 )

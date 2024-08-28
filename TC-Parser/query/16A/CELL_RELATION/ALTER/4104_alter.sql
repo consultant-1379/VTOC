@@ -1,0 +1,15 @@
+ALTER TABLE EVENT3_4104 
+ADD pmHoExeAttLteInterFUeMeas as int null,
+ADD pmHoExeAttLteInterFUeMeasRsrp as int null,
+ADD pmHoExeSuccLteInterFUeMeas as int null,
+ADD pmHoExeSuccLteInterFUeMeasRsrp as int null,
+ADD pmHoExeSuccLteInterFAto as int null,
+ADD pmHoExeAttUeMeasU as int null,
+ADD pmHoExeAttUeMeasG as int null,
+ADD pmHoExeAttUeMeasRsrpU as int null, 
+ADD pmHoExeAttUeMeasRsrpG as int null, 
+ADD pmHoExeSuccUeMeasU as int null,
+ADD pmHoExeSuccUeMeasG as int null, 
+ADD pmHoExeSuccUeMeasRsrpU as int null,
+ADD pmHoExeSuccUeMeasRsrpG as int null,
+ADD pmHoExeAttLteInterFAto as int null;

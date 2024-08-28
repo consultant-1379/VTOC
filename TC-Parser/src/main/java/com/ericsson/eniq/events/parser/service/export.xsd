@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:t="http://www.w3.org/namespace/" targetNamespace="http://www.w3.org/namespace/">
+
+ <element name="model">
+  <complexType>
+   <sequence>
+    <element maxOccurs="unbounded" ref="t:mo"/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name="mo">
+  <complexType>
+   <sequence>
+    <element maxOccurs="unbounded" ref="t:attr"/>
+   </sequence>
+   <attribute name="fdn" type="string" use="required"/>
+   <attribute name="mimName" type="string" use="optional"/>
+   <attribute name="mimVersion" type="string" use="optional"/>
+  </complexType>
+ </element>
+
+ <element name="attr">
+  <complexType mixed="true">
+   <choice maxOccurs="unbounded" minOccurs="0">
+    <element ref="t:struct"/>
+    <element ref="t:seq"/>
+   </choice>
+   <attribute name="name" use="required">
+    <simpleType>
+     <restriction base="string">
+      <enumeration value="userLabel"/>
+      <enumeration value="siteRef"/>
+      <enumeration value="rbsIubId"/>
+      <enumeration value="neMIMversion"/>
+      <enumeration value="MeContextId"/>
+      <enumeration value="localCellId"/>
+      <enumeration value="adjacentCell"/>
+      <enumeration value="UtranCellId"/>
+      <enumeration value="tCell"/>
+      <enumeration value="rbsId"/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name="seq">
+  <complexType>
+   <sequence>
+    <element maxOccurs="unbounded" ref="t:item"/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name="item">
+  <complexType mixed="true">
+   <sequence maxOccurs="unbounded" minOccurs="0">
+    <element ref="t:struct"/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name="struct">
+  <complexType>
+   <sequence maxOccurs="unbounded" minOccurs="0">
+    <element ref="t:attr"/>
+   </sequence>
+  </complexType>
+ </element>
+</schema>

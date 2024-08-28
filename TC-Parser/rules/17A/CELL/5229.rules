@@ -1,0 +1,3 @@
+alias.MOIDCondition <-  in.MOID = out.MOID
+sum(in.pmAdvCellSupRecoveryCellAtt)<=>sum(out.pmAdvCellSupRecoveryCellAtt)when(alias.MOIDCondition,in.pmAdvCellSupRecoveryCellAtt!=null,in.pmAdvCellSupRecoveryCellAtt!=0,out.pmAdvCellSupRecoveryCellAtt!=null,out.pmAdvCellSupRecoveryCellAtt!=0)
+sum(in.pmAdvCellSupRecoveryNodeAtt)<=>sum(out.pmAdvCellSupRecoveryNodeAtt)when(alias.MOIDCondition,in.pmAdvCellSupRecoveryNodeAtt!=null,in.pmAdvCellSupRecoveryNodeAtt!=0,out.pmAdvCellSupRecoveryNodeAtt!=null,out.pmAdvCellSupRecoveryNodeAtt!=0)

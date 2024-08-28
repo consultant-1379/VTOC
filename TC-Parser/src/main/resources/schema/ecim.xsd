@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="docNum" type="xs:byte"/>
+  <xs:element name="docLang" type="xs:string"/>
+  <xs:element name="docRev" type="xs:byte"/>
+  <xs:element name="docDate" type="xs:date"/>
+  <xs:element name="signature" type="xs:string"/>
+  <xs:element name="momTitle" type="xs:string"/>
+  <xs:element name="momSubTitle" type="xs:byte"/>
+  <xs:element name="momIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="docNum"/>
+        <xs:element ref="docLang"/>
+        <xs:element ref="docRev"/>
+        <xs:element ref="docDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createdBy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="signature"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mimName" type="xs:string"/>
+  <xs:element name="value" type="xs:string"/>
+  <xs:element name="hasClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mimName"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="slot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="value" minOccurs="0"/>
+        <xs:element ref="complexValue" minOccurs="0"/>
+        <xs:element ref="seqValue" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="complexValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="slot" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="seqValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="value" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="object">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hasClass"/>
+        <xs:element ref="slot" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="parentDn" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dtdVersion" type="xs:string"/>
+  <xs:element name="momMetaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="momTitle"/>
+        <xs:element ref="momSubTitle"/>
+        <xs:element ref="momIdentity"/>
+        <xs:element ref="createdBy"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mib">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="object" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name"/>
+      <xs:attribute type="xs:byte" name="release"/>
+      <xs:attribute type="xs:byte" name="version"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="models">
+    <xs:annotation>
+      <xs:documentation>
+	Copyright (c) 2016 Ericsson AB. 
+	All rights reserved 
+
+	DX ECIM Tool-chain generated this file on Feb 1, 2016 11:16:58 AM using:
+	* com.ericsson.ecim.m2m 2.13.0.201412190120
+	* com.ericsson.ecim.dsl 2.13.0.201412190120
+	* com.ericsson.ecim.edm 2.13.0.201412190120
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dtdVersion"/>
+        <xs:element ref="momMetaData"/>
+        <xs:element ref="mib"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

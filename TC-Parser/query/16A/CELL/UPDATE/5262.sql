@@ -1,0 +1,1 @@
+Update EVENT_5262 set pmMeasReportCdma20001xRtt=1 from EVENT_5262 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID where RATTYPE=6 and MEASCAUSE=0;

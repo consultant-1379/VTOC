@@ -1,0 +1,41 @@
+ALTER TABLE EVENT3_4125
+ADD pmUeCtxtRelEnbRnlS1Cause19 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause20 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause21 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause22 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause23 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause24 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause25 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause26 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause27 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause28 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause29 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause30 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause31 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause32 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause33 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause34 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause35 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause36 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause37 as int null,
+ADD pmUeCtxtRelEnbRnlS1Cause38 as int null;
+ALTER TABLE EVENT3_4125
+ADD pmUeCtxtRelMmeMiscS1Cause0 as int null,
+ADD pmUeCtxtRelMmeMiscS1Cause1 as int null,
+ADD pmUeCtxtRelMmeMiscS1Cause2 as int null,
+ADD pmUeCtxtRelMmeMiscS1Cause3 as int null,
+ADD pmUeCtxtRelMmeMiscS1Cause4 as int null,
+ADD pmUeCtxtRelMmeMiscS1Cause5 as int null;
+ALTER TABLE EVENT3_4125
+ADD pmUeCtxtRelMmeNasS1Cause0 as int null,
+ADD pmUeCtxtRelMmeNasS1Cause1 as int null,
+ADD pmUeCtxtRelMmeNasS1Cause2 as int null,
+ADD pmUeCtxtRelMmeNasS1Cause3 as int null,
+ADD pmUeCtxtRelMmeNasS1Cause4 as int null;
+ALTER TABLE EVENT3_4125 ADD pmUeCtxtRelMmeProtS1Cause0 as int null,
+ADD pmUeCtxtRelMmeProtS1Cause1 as int null,
+ADD pmUeCtxtRelMmeProtS1Cause2 as int null,
+ADD pmUeCtxtRelMmeProtS1Cause3 as int null,
+ADD pmUeCtxtRelMmeProtS1Cause4 as int null,
+ADD pmUeCtxtRelMmeProtS1Cause5 as int null,
+ADD pmUeCtxtRelMmeProtS1Cause6 as int null;

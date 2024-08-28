@@ -1,0 +1,6 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+sum(in.pmRrcConnReconfAgSucc) <=> sum(out.pmRrcConnReconfAgSucc )when(alias.MOIDCondition,in.pmRrcConnReconfAgSucc!=null,out.pmRrcConnReconfAgSucc!=null,out.pmRrcConnReconfAgSucc!=0)
+sum(in.pmRrcConnReconfAgSuccQci1) <=> sum(out.pmRrcConnReconfAgSuccQci1)when(alias.MOIDCondition,in.pmRrcConnReconfAgSuccQci1!=null,out.pmRrcConnReconfAgSuccQci1!=null,out.pmRrcConnReconfAgSuccQci1!=0)
+sum(in.pmRrcConnReconfDrxFail) <=> sum(out.pmRrcConnReconfDrxFail)when(alias.MOIDCondition,in.pmRrcConnReconfDrxFail!=null,out.pmRrcConnReconfDrxFail!=null,out.pmRrcConnReconfDrxFail!=0)
+sum(in.pmRrcConnReconfDrxSucc) <=> sum(out.pmRrcConnReconfDrxSucc)when(alias.MOIDCondition,in.pmRrcConnReconfDrxSucc!=null,out.pmRrcConnReconfDrxSucc!=null,out.pmRrcConnReconfDrxSucc!=0)
+sum(in.pmRrcConnReconfDrxSuccQci1) <=> sum(out.pmRrcConnReconfDrxSuccQci1)when(alias.MOIDCondition,in.pmRrcConnReconfDrxSuccQci1!=null,out.pmRrcConnReconfDrxSuccQci1!=null,out.pmRrcConnReconfDrxSuccQci1!=0)

@@ -1,0 +1,3 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+sum(in.pmTaDistr) <=> sum(out.pmTaDistr)when(alias.MOIDCondition, in.pmTaDistr!=null, in.pmTaDistr!=0, out.pmTaDistr!=null, out.pmTaDistr!=0)
+sum(in.pmTimingAdvance) <=> sum(out.pmTimingAdvance)when(alias.MOIDCondition, in.pmTimingAdvance!=null,in.pmTimingAdvance!=0, out.pmTimingAdvance!=null, out.pmTimingAdvance!=0)

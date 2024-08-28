@@ -1,0 +1,3 @@
+alias.MOIDCondition <-  in.MOID = out.MOID
+sum(in.pmAnrPciConflictMeasFailEutranCgi)<=>sum(out.pmAnrPciConflictMeasFailEutranCgi)when(alias.MOIDCondition,in.pmAnrPciConflictMeasFailEutranCgi!=null,in.pmAnrPciConflictMeasFailEutranCgi!=0,out.pmAnrPciConflictMeasFailEutranCgi!=null,out.pmAnrPciConflictMeasFailEutranCgi!=0 )
+sum(in.pmAnrPciConflictMeasSuccEutranCgi)<=>sum(out.pmAnrPciConflictMeasSuccEutranCgi)when(alias.MOIDCondition,in.pmAnrPciConflictMeasSuccEutranCgi!=null,in.pmAnrPciConflictMeasSuccEutranCgi!=0,out.pmAnrPciConflictMeasSuccEutranCgi!=null,out.pmAnrPciConflictMeasSuccEutranCgi!=0 )

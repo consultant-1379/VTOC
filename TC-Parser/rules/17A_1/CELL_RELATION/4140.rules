@@ -1,0 +1,9 @@
+alias.MOIDCondition <- in.CELLRELATIONMOID = out.MOID
+sum(in.pmCaConfiguredAtt) <=> sum(out.pmCaConfiguredAtt)when(alias.MOIDCondition, in.pmCaConfiguredAtt!=null, out.pmCaConfiguredAtt!=null, out.pmCaConfiguredAtt!=0, in.pmCaConfiguredAtt!=0)
+sum(in.pmCaConfiguredSucc) <=> sum(out.pmCaConfiguredSucc)when(alias.MOIDCondition, in.pmCaConfiguredSucc!=null, out.pmCaConfiguredSucc!=null, out.pmCaConfiguredSucc!=0, in.pmCaConfiguredSucc!=0)
+sum(in.pmCaConfiguredBidirSucc) <=> sum(out.pmCaConfiguredBidirSucc)when(alias.MOIDCondition, in.pmCaConfiguredBidirSucc!=null, out.pmCaConfiguredBidirSucc!=null, out.pmCaConfiguredBidirSucc!=0, in.pmCaConfiguredBidirSucc!=0)
+sum(in.pmCaConfiguredFailPreemp) <=> sum(out.pmCaConfiguredFailPreemp)when(alias.MOIDCondition, in.pmCaConfiguredFailPreemp!=null, out.pmCaConfiguredFailPreemp!=null, out.pmCaConfiguredFailPreemp!=0, in.pmCaConfiguredFailPreemp!=0)
+sum(in.pmCaConfiguredMeasAtt) <=> sum(out.pmCaConfiguredMeasAtt)when(alias.MOIDCondition, in.pmCaConfiguredMeasAtt!=null, out.pmCaConfiguredMeasAtt!=null, out.pmCaConfiguredMeasAtt!=0, in.pmCaConfiguredMeasAtt!=0)
+sum(in.pmCaConfiguredMeasSucc) <=> sum(out.pmCaConfiguredMeasSucc)when(alias.MOIDCondition, in.pmCaConfiguredMeasSucc!=null, out.pmCaConfiguredMeasSucc!=null, out.pmCaConfiguredMeasSucc!=0, in.pmCaConfiguredMeasSucc!=0)
+sum(in.pmCaConfiguredNoMeasAtt) <=> sum(out.pmCaConfiguredNoMeasAtt)when(alias.MOIDCondition, in.pmCaConfiguredNoMeasAtt!=null, out.pmCaConfiguredNoMeasAtt!=null, out.pmCaConfiguredNoMeasAtt!=0, in.pmCaConfiguredNoMeasAtt!=0)
+sum(in.pmCaConfiguredNoMeasSucc) <=> sum(out.pmCaConfiguredNoMeasSucc)when(alias.MOIDCondition, in.pmCaConfiguredNoMeasSucc!=null, out.pmCaConfiguredNoMeasSucc!=null, out.pmCaConfiguredNoMeasSucc!=0, in.pmCaConfiguredNoMeasSucc!=0)

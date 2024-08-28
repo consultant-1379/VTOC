@@ -1,0 +1,2 @@
+alias.MOIDCondition <- in.MOID=out.MOID
+sum(in.pmAdvCellSupDetection)<=>sum(out.pmAdvCellSupDetection)when(alias.MOIDCondition,in.pmAdvCellSupDetection!=null,out.pmAdvCellSupDetection!=null,out.pmAdvCellSupDetection!=0)

@@ -1,0 +1,2 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+sum(in.pmRrcMobFromEUtraCmdCdma20001xRtt)<=>sum(out.pmRrcMobFromEUtraCmdCdma20001xRtt)when(alias.MOIDCondition,in.pmRrcMobFromEUtraCmdCdma20001xRtt!=null,in.pmRrcMobFromEUtraCmdCdma20001xRtt!=0,out.pmRrcMobFromEUtraCmdCdma20001xRtt!=null,out.pmRrcMobFromEUtraCmdCdma20001xRtt!=0)

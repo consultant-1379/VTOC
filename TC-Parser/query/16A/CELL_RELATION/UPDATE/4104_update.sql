@@ -1,0 +1,359 @@
+
+--pmHoSigExeOutTimeS1Samp - EUTRAN
+
+Update EVENT_4104 set pmHoSigExeOutTimeS1Samp = 1 
+from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTRESULT = 0;
+
+
+--pmHoSigExeOutTimeS1Sum - EUTRAN
+
+Update EVENT_4104 set pmHoSigExeOutTimeS1Sum =
+(
+case when MOD(
+((TIMESTAMPSTOPHOUR-TIMESTAMPSTARTHOUR)*3600000) +
+((TIMESTAMPSTOPMINUTE-TIMESTAMPSTARTMINUTE)*60000) + 
+((TIMESTAMPSTOPSECOND-TIMESTAMPSTARTSECOND)*1000) 
++(TIMESTAMPSTOPMILLISEC-TIMESTAMPSTARTMILLISEC)
+,3600000) > 0 
+then 
+MOD(
+((TIMESTAMPSTOPHOUR-TIMESTAMPSTARTHOUR)*3600000) +
+((TIMESTAMPSTOPMINUTE-TIMESTAMPSTARTMINUTE)*60000) + 
+((TIMESTAMPSTOPSECOND-TIMESTAMPSTARTSECOND)*1000) 
++(TIMESTAMPSTOPMILLISEC-TIMESTAMPSTARTMILLISEC)
+,3600000) 
+else 
+MOD(
+((TIMESTAMPSTOPHOUR-TIMESTAMPSTARTHOUR)*3600000) +
+((TIMESTAMPSTOPMINUTE-TIMESTAMPSTARTMINUTE)*60000) + 
+((TIMESTAMPSTOPSECOND-TIMESTAMPSTARTSECOND)*1000) 
++(TIMESTAMPSTOPMILLISEC-TIMESTAMPSTARTMILLISEC)
+,3600000)+3600000 end
+)
+from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+ where PROCHOEXECOUTRESULT = 0;
+ 
+ 
+ 
+ 
+ --pmHoExeAttSrvccUeMeas - UTRAN
+ 
+ Update EVENT_4104 set pmHoExeAttSrvccUeMeas = 1
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+ where ((HOSOURCEORTARGETTYPE = 2 OR HOSOURCEORTARGETTYPE = 5) and SRVCCTYPE != 0 AND PROCHOEXECOUTATTEMPTCAUSE = 5 );
+
+ 
+ --pmHoExeAttSrvccUeMeasRsrp - UTRAN
+ 
+ Update EVENT_4104 set pmHoExeAttSrvccUeMeasRsrp = 1 
+ from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+ where ((HOSOURCEORTARGETTYPE = 2 OR HOSOURCEORTARGETTYPE = 5) and SRVCCTYPE != 0 AND PROCHOEXECOUTATTEMPTCAUSE = 5 AND TRIGGERQUANTITY = 0);
+
+ 
+ 
+ --pmHoExeSuccSrvccUeMeas - UTRAN
+ Update EVENT_4104 set pmHoExeSuccSrvccUeMeas = 1 
+ from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+ where PROCHOEXECOUTRESULT =0 and PROCHOEXECOUTATTEMPTCAUSE = 5 and SRVCCTYPE != 0 and (HOSOURCEORTARGETTYPE =2 OR HOSOURCEORTARGETTYPE =5);
+ 
+ 
+ 
+ --pmHoExeSuccSrvccUeMeasRsrp - UTRAN
+ 
+ Update EVENT_4104 set pmHoExeSuccSrvccUeMeasRsrp = 1 
+  from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+	where PROCHOEXECOUTRESULT =0 and PROCHOEXECOUTATTEMPTCAUSE = 5 and SRVCCTYPE != 0 and TRIGGERQUANTITY = 0 and (HOSOURCEORTARGETTYPE =2 OR HOSOURCEORTARGETTYPE =5);
+
+
+	--pmHoExeAttAto - UTRAN
+	
+	Update EVENT_4104 set pmHoExeAttAto = 1 
+	from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+	where HOSOURCEORTARGETTYPE = 2 and PROCHOEXECOUTATTEMPTCAUSE = 18;
+
+
+	
+	
+	
+	--pmHoExeSuccAto - UTRAN
+	
+	Update EVENT_4104 set pmHoExeSuccAto = 1 
+	from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+	where HOSOURCEORTARGETTYPE = 2 and PROCHOEXECOUTRESULT = 0 and PROCHOEXECOUTATTEMPTCAUSE = 18;
+	
+	
+	
+	--pmHoExeAttSrvccAto - UTRAN
+	Update EVENT_4104 set pmHoExeAttSrvccAto = 1 
+	from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+	where ( (HOSOURCEORTARGETTYPE = 2 and PROCHOEXECOUTATTEMPTCAUSE = 18 ) and (SRVCCTYPE = 1 OR SRVCCTYPE = 2 ) );
+	
+	
+	
+	--pmHoExeSuccSrvccAto - UTRAN
+	
+	Update EVENT_4104 set pmHoExeSuccSrvccAto = 1  
+	from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+	where (HOSOURCEORTARGETTYPE =2 and  PROCHOEXECOUTRESULT =0 and PROCHOEXECOUTATTEMPTCAUSE = 18 and (SRVCCTYPE = 1 OR SRVCCTYPE =2 ) );
+
+	
+	--pmHoExeAttLteInterFUeMeas - EUTRAN
+	
+	Update EVENT_4104 set pmHoExeAttLteInterFUeMeas = 1 
+	from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+	where HOSOURCEORTARGETTYPE = 1 and (PROCHOEXECOUTATTEMPTCAUSE = 1 or PROCHOEXECOUTRESULT = 3);
+	
+	
+	
+	--pmHoExeAttLteInterFUeMeasRsrp - EUTRAN
+
+Update EVENT_4104 set pmHoExeAttLteInterFUeMeasRsrp = 1 
+from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where HOSOURCEORTARGETTYPE = 1 and TRIGGERQUANTITY = 0 and (PROCHOEXECOUTATTEMPTCAUSE = 1 or PROCHOEXECOUTATTEMPTCAUSE = 3);
+
+
+
+--pmHoExeSuccLteInterFUeMeas - EUTRAN
+
+Update EVENT_4104 set pmHoExeSuccLteInterFUeMeas = 1 
+from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID
+where (PROCHOEXECOUTRESULT = 0 and 
+HOSOURCEORTARGETTYPE = 1 and (PROCHOEXECOUTATTEMPTCAUSE = 1 or PROCHOEXECOUTATTEMPTCAUSE = 3)) ;
+
+
+--pmHoExeSuccLteInterFUeMeasRsrp - EUTRAN
+
+Update EVENT_4104 set pmHoExeSuccLteInterFUeMeasRsrp = 1 
+from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID
+where (PROCHOEXECOUTRESULT = 0 and 
+HOSOURCEORTARGETTYPE = 1 and TRIGGERQUANTITY = 0 and (PROCHOEXECOUTATTEMPTCAUSE = 1 or PROCHOEXECOUTATTEMPTCAUSE = 3));
+
+
+
+--pmHoExeSuccLteInterFAto - EUTRAN
+
+Update EVENT_4104 set pmHoExeSuccLteInterFAto =1 
+from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID
+ where HOSOURCEORTARGETTYPE = 1 and PROCHOEXECOUTRESULT = 0 and PROCHOEXECOUTATTEMPTCAUSE = 18 ;
+ 
+ 
+ --UtranCellRelation
+Update EVENT_4104 set pmHoExeAttUeMeasU = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTATTEMPTCAUSE = 5 AND HOSOURCEORTARGETTYPE = 2 OR  HOSOURCEORTARGETTYPE = 5;
+
+--GeranCellRelation
+Update EVENT_4104 set pmHoExeAttUeMeasG = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_LAC_ID = B.NBR_LAC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTATTEMPTCAUSE = 5 AND HOSOURCEORTARGETTYPE = 3;
+
+
+
+
+--UtranCellRelation
+Update EVENT_4104 set pmHoExeAttUeMeasRsrpU = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTATTEMPTCAUSE = 5 AND TRIGGERQUANTITY = 0 AND HOSOURCEORTARGETTYPE = 2 OR  HOSOURCEORTARGETTYPE = 5;
+
+--GeranCellRelation
+Update EVENT_4104 set pmHoExeAttUeMeasRsrpG = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_LAC_ID = B.NBR_LAC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTATTEMPTCAUSE = 5 AND HOSOURCEORTARGETTYPE = 3 AND TRIGGERQUANTITY = 0 ;
+
+
+
+
+--UtranCellRelation
+Update EVENT_4104 set pmHoExeSuccUeMeasU = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTRESULT=0 AND PROCHOEXECOUTATTEMPTCAUSE = 5 AND HOSOURCEORTARGETTYPE = 2 OR  HOSOURCEORTARGETTYPE = 5;
+
+--GeranCellRelation
+Update EVENT_4104 set pmHoExeSuccUeMeasG = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_LAC_ID = B.NBR_LAC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTRESULT=0 AND PROCHOEXECOUTATTEMPTCAUSE = 5 AND HOSOURCEORTARGETTYPE = 3;
+
+
+
+
+
+--UtranCellRelation
+Update EVENT_4104 set pmHoExeSuccUeMeasRsrpU = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_RNC_ID = B.NBR_RNC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTRESULT=0 AND PROCHOEXECOUTATTEMPTCAUSE = 5 AND TRIGGERQUANTITY = 0 AND HOSOURCEORTARGETTYPE = 2 OR  HOSOURCEORTARGETTYPE = 5;
+
+--GeranCellRelation
+Update EVENT_4104 set pmHoExeSuccUeMeasRsrpG = 1 
+from EVENT_4104 A
+inner
+  join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_LAC_ID = B.NBR_LAC_ID and
+	A.NBR_MCC_ID = B.NBR_MCC and
+	A.NBR_MNC_ID = B.NBR_MNC and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where PROCHOEXECOUTRESULT=0 AND PROCHOEXECOUTATTEMPTCAUSE = 5 AND HOSOURCEORTARGETTYPE = 3 AND TRIGGERQUANTITY = 0  ;
+
+
+
+--EUtranCellRelation
+
+Update EVENT_4104 set pmHoExeAttLteInterFAto = 1 
+from EVENT_4104 A inner join topo_cellrelation B
+    on 	A.CELL_ID = B.CELL_ID and 
+	A.ENB_ID = B.ENB_ID and
+	A.NBR_ENB_ID = B.NBR_ENB_ID and
+	A.NBR_CELL_ID = B.NBR_CELL_ID 
+where HOSOURCEORTARGETTYPE = 1 AND PROCHOEXECOUTATTEMPTCAUSE = 18  ;
+
+

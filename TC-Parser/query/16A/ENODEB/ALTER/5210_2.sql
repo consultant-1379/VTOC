@@ -1,0 +1,15 @@
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInRnlX2Cause26 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInRnlX2Cause27 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInRnlX2Cause28 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInProtX2Cause0 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInProtX2Cause1 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInProtX2Cause2 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInProtX2Cause3 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInProtX2Cause4 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInProtX2Cause5 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInProtX2Cause6 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInMiscX2Cause0 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInMiscX2Cause1 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInMiscX2Cause2 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInMiscX2Cause3 as int  null;
+ALTER TABLE EVENT3_5210 ADD pmX2ErrorIndInMiscX2Cause4 as int  null;

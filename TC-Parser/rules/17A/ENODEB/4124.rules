@@ -1,0 +1,7 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+sum(in.pmS1ConnShutdownTimeDistr) <=> sum(out.pmS1ConnShutdownTimeDistr)when(alias.MOIDCondition, in.pmS1ConnShutdownTimeDistr!=null, in.pmS1ConnShutdownTimeDistr!=0, out.pmS1ConnShutdownTimeDistr!=null, out.pmS1ConnShutdownTimeDistr!=0)
+sum(in.pmS1ConnShutdownTimeSamp) <=> sum(out.pmS1ConnShutdownTimeSamp)when(alias.MOIDCondition, in.pmS1ConnShutdownTimeSamp!=null, in.pmS1ConnShutdownTimeSamp!=0, out.pmS1ConnShutdownTimeSamp!=null, out.pmS1ConnShutdownTimeSamp!=0)
+sum(in.pmS1ConnShutdownTimeSum) <=> sum(out.pmS1ConnShutdownTimeSum)when(alias.MOIDCondition, in.pmS1ConnShutdownTimeSum!=null, in.pmS1ConnShutdownTimeSum!=0, out.pmS1ConnShutdownTimeSum!=null, out.pmS1ConnShutdownTimeSum!=0)
+sum(in.pmS1LiteConnShutdownTimeDistr) <=> sum(out.pmS1LiteConnShutdownTimeDistr)when(alias.MOIDCondition, in.pmS1LiteConnShutdownTimeDistr!=null, in.pmS1LiteConnShutdownTimeDistr!=0, out.pmS1LiteConnShutdownTimeDistr!=null, out.pmS1LiteConnShutdownTimeDistr!=0)
+sum(in.pmS1LiteConnShutdownTimeSamp) <=> sum(out.pmS1LiteConnShutdownTimeSamp)when(alias.MOIDCondition, in.pmS1LiteConnShutdownTimeSamp!=null, in.pmS1LiteConnShutdownTimeSamp!=0, out.pmS1LiteConnShutdownTimeSamp!=null, out.pmS1LiteConnShutdownTimeSamp!=0)
+sum(in.pmS1LiteConnShutdownTimeSum) <=> sum(out.pmS1LiteConnShutdownTimeSum)when(alias.MOIDCondition, in.pmS1LiteConnShutdownTimeSum!=null, in.pmS1LiteConnShutdownTimeSum!=0, out.pmS1LiteConnShutdownTimeSum!=null, out.pmS1LiteConnShutdownTimeSum!=0)

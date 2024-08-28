@@ -1,0 +1,13 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+#counter based on 4102 and 4110
+sum(in.CounterValue) <=> sum(out.pmHoPrepAttLteInterFAto)when(alias.MOIDCondition, in.CounterName="pmhoprepattlteinterfato", out.pmHoPrepAttLteInterFAto != null, out.pmHoPrepAttLteInterFAto != 0,in.CounterValue != null,in.CounterValue!=0 )
+sum(in.CounterValue) <=> sum(out.pmHoPrepSuccLteInterFAto)when(alias.MOIDCondition, in.CounterName="pmhoprepsucclteinterfato", out.pmHoPrepSuccLteInterFAto != null, out.pmHoPrepSuccLteInterFAto != 0,in.CounterValue != null,in.CounterValue!=0 )
+sum(in.CounterValue) <=> sum(out.pmHoPrepOutAttQci)when(alias.MOIDCondition, in.CounterName="pmHoPrepOutAttQci", out.pmHoPrepOutAttQci != null, out.pmHoPrepOutAttQci != 0,in.CounterValue != null,in.CounterValue!=0 )
+sum(in.CounterValue) <=> sum(out.pmHoPrepOutSuccQci)when(alias.MOIDCondition, in.CounterName="pmHoPrepOutSuccQci", out.pmHoPrepOutSuccQci != null, out.pmHoPrepOutSuccQci != 0,in.CounterValue != null,in.CounterValue!=0 )
+
+#4104 and 4112 
+sum(in.CounterValue) <=> sum(out.pmHoExeAttLteInterFUeMeas)when(alias.MOIDCondition,in.CounterName= "pmhoexeattlteinterfuemeas", out.pmHoExeAttLteInterFUeMeas!=null, out.pmHoExeAttLteInterFUeMeas!=0,in.CounterValue != null,in.CounterValue!=0)
+sum(in.CounterValue) <=> sum(out.pmHoExeAttLteInterFUeMeasRsrp)when(alias.MOIDCondition,in.CounterName= "pmhoexeattlteinterfuemeasrsrp", out.pmHoExeAttLteInterFUeMeasRsrp!=null, out.pmHoExeAttLteInterFUeMeasRsrp!=0,in.CounterValue != null,in.CounterValue!=0)
+sum(in.CounterValue) <=> sum(out.pmHoExeSuccLteInterFUeMeas)when(alias.MOIDCondition,in.CounterName="pmhoexesucclteinterfuemeas", out.pmHoExeSuccLteInterFUeMeas!=null, out.pmHoExeSuccLteInterFUeMeas!=0,in.CounterValue != null,in.CounterValue!=0)
+sum(in.CounterValue) <=> sum(out.pmHoExeSuccLteInterFUeMeasRsrp)when(alias.MOIDCondition,in.CounterName="pmhoexesucclteinterfuemeasrsrp", out.pmHoExeSuccLteInterFUeMeasRsrp!=null, out.pmHoExeSuccLteInterFUeMeasRsrp!=0,in.CounterValue != null,in.CounterValue!=0) 
+

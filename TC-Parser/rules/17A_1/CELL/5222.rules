@@ -1,0 +1,3 @@
+alias.MOIDCondition <- in.MOID=out.MOID
+sum(in.pmNoOfEtwsPrimSucc)<=>sum(out.pmNoOfEtwsPrimSucc)when(alias.MOIDCondition,in.pmNoOfEtwsPrimSucc!=null,in.pmNoOfEtwsPrimSucc!=0,out.pmNoOfEtwsPrimSucc!=null,out.pmNoOfEtwsPrimSucc!=0)
+sum(in.pmNoOfEtwsSecSucc)<=>sum(out.pmNoOfEtwsSecSucc)when(alias.MOIDCondition,in.pmNoOfEtwsSecSucc!=null,in.pmNoOfEtwsSecSucc!=0,out.pmNoOfEtwsSecSucc!=null,out.pmNoOfEtwsSecSucc!=0)

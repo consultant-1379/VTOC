@@ -1,0 +1,1 @@
+Alter Table EVENT3_30 add pmRrcCsfbParRespCdma20001xRtt as int null ;

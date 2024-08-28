@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MeasDataCollection.dtd version 2.0-->
+<!ELEMENT mdc (mfh, md*, mff)>
+<!ELEMENT mfh (ffv, sn, st, vn, cbt)>
+<!ELEMENT md (neid, mi*)>
+<!ELEMENT neid (neun, nedn, nesw?)>
+<!ELEMENT mi (mts, jobid?, gp, rp?, mt*, mv*)>
+<!ELEMENT mv (moid, r*, sf?)>
+<!ELEMENT mff (ts)>
+<!ELEMENT jobid (#PCDATA)>
+<!ELEMENT rp (#PCDATA)>
+<!ELEMENT ts (#PCDATA)>
+<!ELEMENT sf (#PCDATA)>
+<!ELEMENT r (#PCDATA)>
+	<!ATTLIST r p CDATA "">
+<!ELEMENT mt (#PCDATA)>
+	<!ATTLIST mt p CDATA "">
+<!ELEMENT moid (#PCDATA)>
+<!ELEMENT gp (#PCDATA)>
+<!ELEMENT mts (#PCDATA)>
+<!ELEMENT nedn (#PCDATA)>
+<!ELEMENT neun (#PCDATA)>
+<!ELEMENT nesw (#PCDATA)>
+<!ELEMENT cbt (#PCDATA)>
+<!ELEMENT vn (#PCDATA)>
+<!ELEMENT st (#PCDATA)>
+<!ELEMENT sn (#PCDATA)>
+<!ELEMENT ffv (#PCDATA)>
+<!-- end of MeasDataCollection.dtd -->

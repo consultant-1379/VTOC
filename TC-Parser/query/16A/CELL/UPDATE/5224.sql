@@ -1,0 +1,2 @@
+Update EVENT_5224 set pmNoOfCmasRepReq =1, NOOFREPETREQ=1 from EVENT_5224 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID where CMASRESULT=0 ;
+Update EVENT_5224 set pmNoOfCmasSucc =1 from EVENT_5224 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID where CMASRESULT=0 ;

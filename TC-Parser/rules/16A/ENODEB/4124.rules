@@ -1,0 +1,4 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+sum(in.pmS1ConnShutdownTimeDistr) <=> sum(out.pmS1ConnShutdownTimeDistr)when(alias.MOIDCondition, in.pmS1ConnShutdownTimeDistr!=null, out.pmS1ConnShutdownTimeDistr!=null, out.pmS1ConnShutdownTimeDistr!=0)
+sum(in.pmS1ConnShutdownTimeSamp) <=> sum(out.pmS1ConnShutdownTimeSamp)when(alias.MOIDCondition, in.pmS1ConnShutdownTimeSamp!=null, out.pmS1ConnShutdownTimeSamp!=null, out.pmS1ConnShutdownTimeSamp!=0)
+sum(in.pmS1ConnShutdownTimeSum) <=> sum(out.pmS1ConnShutdownTimeSum)when(alias.MOIDCondition, in.pmS1ConnShutdownTimeSum!=null, out.pmS1ConnShutdownTimeSum!=null, out.pmS1ConnShutdownTimeSum!=0)

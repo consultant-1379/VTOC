@@ -1,0 +1,3 @@
+alias.MOIDCondition <-  in.CELLRELATIONMOID = out.MOID
+unique(in.apmHoPrepAttLteInterFAtoM ) <=> sum(out.pmHoPrepAttLteInterFAto)when(alias.MOIDCondition, in.pmHoPrepAttLteInterFAto !=null, out.pmHoPrepAttLteInterFAto != null, out.pmHoPrepAttLteInterFAto != 0 )
+unique(in.apmHoPrepSuccLteInterFAtoM) <=> sum(out.pmHoPrepSuccLteInterFAto)when(alias.MOIDCondition, in.pmHoPrepSuccLteInterFAto !=null, out.pmHoPrepSuccLteInterFAto != null, out.pmHoPrepSuccLteInterFAto != 0 )

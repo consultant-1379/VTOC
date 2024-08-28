@@ -1,0 +1,3 @@
+alias.MOIDCondition <-  in.MOID = out.MOID
+sum(in.pmAnrNeighbrelDelGeran)<=>sum(out.pmAnrNeighbrelDelGeran)when(alias.MOIDCondition,in.pmAnrNeighbrelDelGeran!=null,in.pmAnrNeighbrelDelGeran!=0,out.pmAnrNeighbrelDelGeran!=null,out.pmAnrNeighbrelDelGeran!=0 )
+sum(in.pmAnrNeighbrelDelUtran)<=>sum(out.pmAnrNeighbrelDelUtran)when(alias.MOIDCondition,in.pmAnrNeighbrelDelUtran!=null,in.pmAnrNeighbrelDelUtran!=0,out.pmAnrNeighbrelDelUtran!=null,out.pmAnrNeighbrelDelUtran!=0 )

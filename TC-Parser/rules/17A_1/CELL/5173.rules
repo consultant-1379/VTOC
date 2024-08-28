@@ -1,0 +1,7 @@
+alias.MOIDCondition <-  in.MOID = out.MOID
+sum(in.pmAnrMeasSuccEutranPci)<=>sum(out.pmAnrMeasSuccEutranPci)when(alias.MOIDCondition,in.pmAnrMeasSuccEutranPci!=null,in.pmAnrMeasSuccEutranPci!=0,out.pmAnrMeasSuccEutranPci!= null,out.pmAnrMeasSuccEutranPci!= 0)
+sum(in.pmAnrMeasFailEutranPci)<=>sum(out.pmAnrMeasFailEutranPci)when(alias.MOIDCondition,in.pmAnrMeasFailEutranPci!=null,in.pmAnrMeasFailEutranPci!=0,out.pmAnrMeasFailEutranPci!= null,out.pmAnrMeasFailEutranPci!= 0)
+sum(in.pmAnrUeCapFailUtran)<=>sum(out.pmAnrUeCapFailUtran)when(alias.MOIDCondition, in.pmAnrUeCapFailUtran!=null, in.pmAnrUeCapFailUtran!=0,out.pmAnrUeCapFailUtran != null,out.pmAnrUeCapFailUtran != 0)
+sum(in.pmAnrUeCapFailGeran)<=>sum(out.pmAnrUeCapFailGeran)when(alias.MOIDCondition, in.pmAnrUeCapFailGeran!=null, in.pmAnrUeCapFailGeran!=0,out.pmAnrUeCapFailGeran != null,out.pmAnrUeCapFailGeran != 0)
+sum(in.pmAnrUeCapSuccGeran)<=>sum(out.pmAnrUeCapSuccGeran)when(alias.MOIDCondition, in.pmAnrUeCapSuccGeran!=null, in.pmAnrUeCapSuccGeran!=0,out.pmAnrUeCapSuccGeran != null,out.pmAnrUeCapSuccGeran != 0)
+sum(in.pmAnrUeCapSuccUtran)<=>sum(out.pmAnrUeCapSuccUtran)when(alias.MOIDCondition, in.pmAnrUeCapSuccUtran!=null, in.pmAnrUeCapSuccUtran!=0,out.pmAnrUeCapSuccUtran != null,out.pmAnrUeCapSuccUtran != 0)

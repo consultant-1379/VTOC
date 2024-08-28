@@ -1,0 +1,1 @@
+Update EVENT_35 set pmRrcMobFromEUtraCmdCdma20001xRtt=1 from EVENT_35 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID where MOBILITYPURPOSE=0 and HANDOVERTARGETRATTYPE=2;

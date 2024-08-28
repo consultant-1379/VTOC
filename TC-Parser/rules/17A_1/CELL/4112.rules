@@ -1,0 +1,3 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+sum(in.pmHoExecOutX2AttInterEnb) <=> sum(out.pmHoExecOutX2AttInterEnb)when(alias.MOIDCondition,in.pmHoExecOutX2AttInterEnb!=null,in.pmHoExecOutX2AttInterEnb!=0,out.pmHoExecOutX2AttInterEnb!= null,out.pmHoExecOutX2AttInterEnb!= 0)
+sum(in.pmHoExecOutX2SuccInterEnb) <=> sum(out.pmHoExecOutX2SuccInterEnb)when(alias.MOIDCondition,in.pmHoExecOutX2SuccInterEnb!=null,in.pmHoExecOutX2SuccInterEnb!=0,out.pmHoExecOutX2SuccInterEnb!= null,out.pmHoExecOutX2SuccInterEnb!= 0)

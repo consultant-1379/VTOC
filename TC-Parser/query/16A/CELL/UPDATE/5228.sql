@@ -1,0 +1,1 @@
+Update EVENT_5228 set pmAdvCellSupDetection =1 from EVENT_5228 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID;

@@ -1,0 +1,1 @@
+Alter Table EVENT3_35 add pmRrcMobFromEUtraCmdCdma20001xRtt as int null ;

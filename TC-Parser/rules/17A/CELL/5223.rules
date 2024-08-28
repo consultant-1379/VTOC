@@ -1,0 +1,2 @@
+alias.MOIDCondition <-  in.MOID = out.MOID
+sum(in.pmNoOfCmasReq)<=>sum(out.pmNoOfCmasReq)when(alias.MOIDCondition,in.pmNoOfCmasReq!=null,in.pmNoOfCmasReq!=0,out.pmNoOfCmasReq!=null,out.pmNoOfCmasReq!=0)

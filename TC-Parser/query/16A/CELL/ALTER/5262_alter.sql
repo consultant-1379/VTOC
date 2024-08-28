@@ -1,0 +1,1 @@
+Alter Table EVENT3_5262 add pmMeasReportCdma20001xRtt as int null ;

@@ -1,0 +1,3 @@
+alias.MOIDCondition <- in.CELLRELATIONMOID = out.MOID
+sum(in.pmHoSigExeOutTimeX2Samp) <=> sum(out.pmHoSigExeOutTimeX2Samp)when(alias.MOIDCondition, in.pmHoSigExeOutTimeX2Samp!=null, out.pmHoSigExeOutTimeX2Samp!=null, out.pmHoSigExeOutTimeX2Samp!=0, in.pmHoSigExeOutTimeX2Samp!=0)
+sum(in.pmHoSigExeOutTimeX2Sum) <=> sum(out.pmHoSigExeOutTimeX2Sum)when(alias.MOIDCondition, in.pmHoSigExeOutTimeX2Sum!=null, out.pmHoSigExeOutTimeX2Sum!=null, out.pmHoSigExeOutTimeX2Sum!=0, in.pmHoSigExeOutTimeX2Sum!=0)

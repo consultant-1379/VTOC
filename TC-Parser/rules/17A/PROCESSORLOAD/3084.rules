@@ -1,0 +1,4 @@
+alias.MOIDCondition <- in.MOID = out.MOID
+sum(in.pmProcessorLoadSamp) <=> sum(out.pmProcessorLoadSamp)when(alias.MOIDCondition, in.pmProcessorLoadSamp!=null, in.pmProcessorLoadSamp!=0, out.pmProcessorLoadSamp!=null, out.pmProcessorLoadSamp!=0)
+max(in.pmProcessorLoadMax) <=> max(out.pmProcessorLoadMax)when(alias.MOIDCondition, in.pmProcessorLoadMax!=null, in.pmProcessorLoadMax!=0, out.pmProcessorLoadMax!=null, out.pmProcessorLoadMax!=0)
+sum(in.pmProcessorLoadSum) <=> sum(out.pmProcessorLoadSum)when(alias.MOIDCondition, in.pmProcessorLoadSum!=null, in.pmProcessorLoadSum!=0, out.pmProcessorLoadSum!=null, out.pmProcessorLoadSum!=0)

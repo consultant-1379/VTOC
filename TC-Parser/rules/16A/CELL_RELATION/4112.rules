@@ -1,0 +1,9 @@
+alias.MOIDCondition <- in.CELLRELATIONMOID = out.MOID
+sum(in.pmHoSigExeOutTimeX2Samp) <=> sum(out.pmHoSigExeOutTimeX2Samp)when(alias.MOIDCondition, in.pmHoSigExeOutTimeX2Samp!=null, out.pmHoSigExeOutTimeX2Samp!=null, out.pmHoSigExeOutTimeX2Samp!=0)
+sum(in.pmHoSigExeOutTimeX2Sum) <=> sum(out.pmHoSigExeOutTimeX2Sum)when(alias.MOIDCondition, in.pmHoSigExeOutTimeX2Sum!=null, out.pmHoSigExeOutTimeX2Sum!=null, out.pmHoSigExeOutTimeX2Sum!=0)
+unique(in.pmHoExeAttLteInterFAtoM) <=> sum(out.pmHoExeAttLteInterFAto)when(alias.MOIDCondition, in.pmHoExeAttLteInterFAto!=null, out.pmHoExeAttLteInterFAto!=null, out.pmHoExeAttLteInterFAto!=0)
+unique(in.pmHoExeSuccLteInterFAtoM) <=> sum(out.pmHoExeSuccLteInterFAto)when(alias.MOIDCondition, in.pmHoExeSuccLteInterFAto!=null, out.pmHoExeSuccLteInterFAto!=null, out.pmHoExeSuccLteInterFAto!=0) 
+unique(in.pmHoExeSuccLteInterFUeMeasRsrpM) <=> sum(out.pmHoExeSuccLteInterFUeMeasRsrp)when(alias.MOIDCondition, in.pmHoExeSuccLteInterFUeMeasRsrp!=null, out.pmHoExeSuccLteInterFUeMeasRsrp!=null, out.pmHoExeSuccLteInterFUeMeasRsrp!=0) 
+unique(in.pmHoExeSuccLteInterFUeMeasM) <=> sum(out.pmHoExeSuccLteInterFUeMeas)when(alias.MOIDCondition, in.pmHoExeSuccLteInterFUeMeas!=null, out.pmHoExeSuccLteInterFUeMeas!=null, out.pmHoExeSuccLteInterFUeMeas!=0) 
+unique(in.pmHoExeAttLteInterFUeMeasRsrpM) <=> sum(out.pmHoExeAttLteInterFUeMeasRsrp)when(alias.MOIDCondition, in.pmHoExeAttLteInterFUeMeasRsrp!=null, out.pmHoExeAttLteInterFUeMeasRsrp!=null, out.pmHoExeAttLteInterFUeMeasRsrp!=0) 
+unique(in.pmHoExeAttLteInterFUeMeasM) <=> sum(out.pmHoExeAttLteInterFUeMeas)when(alias.MOIDCondition, in.pmHoExeAttLteInterFUeMeas!=null, out.pmHoExeAttLteInterFUeMeas!=null, out.pmHoExeAttLteInterFUeMeas!=0) 

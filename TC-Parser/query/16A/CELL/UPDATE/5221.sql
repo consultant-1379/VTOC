@@ -1,0 +1,2 @@
+Update EVENT_5221 set pmNoOfEtwsPrimReq =1 from EVENT_5221 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID where ETWSTYPE=0 or ETWSTYPE=2;
+Update EVENT_5221 set pmNoOfEtwsSecReq =1 from EVENT_5221 A inner join topo_eucell B on A.CELL_ID = B.CELL_ID and A.ENB_ID = B.ENB_ID where ETWSTYPE=1 or ETWSTYPE=2;

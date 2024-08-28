@@ -1,0 +1,28 @@
+ALTER TABLE EVENT3_4102
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause15 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause16 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause17 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause18 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause19 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause20 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause21 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause22 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause23 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause24 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause25 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause26 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause27 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause28 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause29 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause30 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause31 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause32 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause33 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause34 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause35 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause36 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause37 as int null ,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause38 as int null;
+ALTER TABLE EVENT3_4102 ADD pmHoPrepOutS1RejInterEnbIntraFreqTranS1Cause0 as int null,
+ADD pmHoPrepOutS1RejInterEnbIntraFreqTranS1Cause1 as int null ;
+ALTER Table EVENT3_4102 add pmHoPrepOutS1SuccInterEnb as int null;

@@ -1,0 +1,16 @@
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause22 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause23 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause24 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause25 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause26 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause27 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause28 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause29 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause30 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause31 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause32 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause33 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause34 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndRnlS1Cause35 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndTranS1Cause0 as int null;
+ALTER TABLE EVENT3_5208 ADD pmS1NasNonDelivIndTranS1Cause1 as int null;

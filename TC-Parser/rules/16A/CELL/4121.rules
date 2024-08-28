@@ -1,0 +1,9 @@
+alias.MOIDCondition <- in.MOID = out.MOID 
+sum(in.pmRrcConnReestAttHof) <=> sum(out.pmRrcConnReestAttHof)when(alias.MOIDCondition, in.pmRrcConnReestAttHof!=null, out.pmRrcConnReestAttHof != null, out.pmRrcConnReestAttHof != 0)
+sum(in.pmRrcConnReestAttOthf) <=> sum(out.pmRrcConnReestAttOthf)when(alias.MOIDCondition, in.pmRrcConnReestAttOthf!=null, out.pmRrcConnReestAttOthf!=null, out.pmRrcConnReestAttOthf!=0)
+sum(in.pmRrcConnReestAttRecf) <=> sum(out.pmRrcConnReestAttRecf)when(alias.MOIDCondition, in.pmRrcConnReestAttRecf!=null, out.pmRrcConnReestAttRecf!=null, out.pmRrcConnReestAttRecf!=0)
+sum(in.pmRrcConnReestSuccHof) <=> sum(out.pmRrcConnReestSuccHof)when(alias.MOIDCondition, in.pmRrcConnReestSuccHof!=null, out.pmRrcConnReestSuccHof!=null, out.pmRrcConnReestSuccHof!=0)
+sum(in.pmRrcConnReestSuccOthf) <=> sum(out.pmRrcConnReestSuccOthf)when(alias.MOIDCondition, in.pmRrcConnReestSuccOthf!=null, out.pmRrcConnReestSuccOthf!=null, out.pmRrcConnReestSuccOthf!=0)
+sum(in.pmRrcConnReestSuccRecf) <=> sum(out.pmRrcConnReestSuccRecf)when(alias.MOIDCondition, in.pmRrcConnReestSuccRecf!=null, out.pmRrcConnReestSuccRecf!=null, out.pmRrcConnReestSuccRecf!=0)
+sum(in.pmRrcConnReestAttUeUnknown) <=> sum(out.pmRrcConnReestAttUeUnknown)when(alias.MOIDCondition, in.pmRrcConnReestAttUeUnknown!=null, out.pmRrcConnReestAttUeUnknown!=null, out.pmRrcConnReestAttUeUnknown!=0)
+sum(in.pmRrcConnReestSuccUeUnknown) <=> sum(out.pmRrcConnReestSuccUeUnknown)when(alias.MOIDCondition, in.pmRrcConnReestSuccUeUnknown!=null, out.pmRrcConnReestSuccUeUnknown!=null, out.pmRrcConnReestSuccUeUnknown!=0)
